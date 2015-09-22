@@ -134,7 +134,8 @@ $(function(){
 
     $(document).on('scroll', function(){
         value = $(window).scrollTop();
-        correctValue = value * factor;
+        var correctFactor = 83;
+        correctValue = (value + correctFactor) * factor;
         console.log('value',value * factor);
         animationCircle.animate({
             transform:'translate('+correctValue+',0)'
